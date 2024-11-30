@@ -1,0 +1,23 @@
+pipeline {
+    agent any
+    
+    stages {
+
+        stage('List out items after checking out code') {
+            steps {
+                sh "ls -ltr"
+            }
+        }
+        stage('Setup') {
+            steps {
+                sh "pip install -r requirements.txt"
+            }
+        }
+        stage('Test') {
+            steps {
+                sh "pytest"
+                sh "whoami"
+            }
+        }
+    }
+}
