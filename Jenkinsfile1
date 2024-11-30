@@ -11,6 +11,8 @@ pipeline {
         stage('Setup') {
             steps {
                 sh "pwd"
+                sh "sudo apt-get install python3-venv"
+                sh "python3 -m venv flask"
                 sh "source flask/bin/activate"
                 sh "pip3 install -r requirements.txt"
             }
