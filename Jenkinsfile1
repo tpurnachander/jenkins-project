@@ -10,6 +10,7 @@ pipeline {
         }
         stage('Setup') {
             steps {
+                sh "pwd"
                 sh "source flask/bin/activate"
                 sh "pip3 install -r requirements.txt"
             }
