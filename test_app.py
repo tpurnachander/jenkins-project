@@ -1,6 +1,7 @@
 import pytest
 from app import app as flask_app, tasks  # Import the tasks dictionary
 # Hii
+# for pipeliine , added this line
 @pytest.fixture
 def app():
     yield flask_app
