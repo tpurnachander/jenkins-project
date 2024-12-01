@@ -19,7 +19,7 @@ pipeline {
             steps {
                 
                 sh "sudo apt-get install python3"
-                sh "sudo apt-get install python3-pytest"
+                sh "sudo apt-get install python3-pytest -y"
                 sh "python3 -m pytest test_app.py"
                 
                 sh "whoami"
