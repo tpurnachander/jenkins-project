@@ -12,10 +12,7 @@ pipeline {
             steps {
                 sh "pwd"
                 sh "whoami "
-                sh "sudo apt-get install python3-venv"
-                sh "python3 -m venv flask"
-                sh "source flask/bin/activate"
-                sh "pip install -r requirements.txt"
+                
             }
         }
         stage('Test') {
